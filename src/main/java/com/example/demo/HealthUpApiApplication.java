@@ -27,6 +27,10 @@ public class HealthUpApiApplication extends SpringBootServletInitializer{
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+				return builder.sources(HealthUpApiApplication.class);
+	}
 	public static void main(String[] args) {
 		SpringApplication.run(HealthUpApiApplication.class, args);
 	}
